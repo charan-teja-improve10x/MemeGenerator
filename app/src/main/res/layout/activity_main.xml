@@ -14,12 +14,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="Template Name"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText"
-        app:layout_constraintStart_toStartOf="@+id/editTextText"
+        app:layout_constraintBottom_toTopOf="@+id/templates_sp"
+        app:layout_constraintStart_toStartOf="@+id/templates_sp"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextText"
+    <Spinner
+        android:id="@+id/templates_sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -37,7 +37,7 @@
         android:text="Top Text"
         app:layout_constraintBottom_toTopOf="@+id/editTextText2"
         app:layout_constraintStart_toStartOf="@+id/editTextText2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/templates_sp" />
 
     <EditText
         android:id="@+id/editTextText2"
