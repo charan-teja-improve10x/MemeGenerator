@@ -2,6 +2,7 @@ package com.example.memegenerator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
@@ -28,15 +29,14 @@ public class MainActivity extends AppCompatActivity {
         binding.templatesSp.setAdapter(adapter);
     }
 
-    private void showImage(String imageUrl) {
-        Picasso.get().load(imageUrl).into(binding.imageView);
-    }
+
 
     private void handleGenerateBtn() {
         binding.button.setOnClickListener(v -> {
-            Toast.makeText(this, "Button Clicked", Toast.LENGTH_SHORT).show();
             String memeUrl = generateMemeUrl(getTemplateName(), getTopText(), getBottomText());
-            showImage(memeUrl);
+            Intent intent = new Intent(this, MemeActivity.class);
+            intent.putExtra(memeUrl, "URL");
+            startActivity(intent);
         });
     }
 
